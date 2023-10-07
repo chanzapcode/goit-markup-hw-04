@@ -149,12 +149,11 @@ span {
 }
 
 .img-gallery {
-  padding: 20px 10px;
-  margin: 100px auto;
+  margin: 10% auto;
   display: flex;
   justify-content: center;
   text-align: left;
-  gap: 10%;
+  gap: 30%;
 }
 .box {
   display: inline-block;
@@ -171,16 +170,46 @@ span {
 }
 .box h4 {
   font-family: sans-serif;
+  color: #2E2F42;
 }
 
 .box h6 {
   font-family: sans-serif;
+  color: #01010c;
 }
 
 .box:hover {
   transform: scale(1.1);
-  z-index: 32;
+  z-index: 3;
 }
+
+.overlay { 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  text-align: center;
+  width: 360px;
+  background-color: #045de9;
+  border-radius: 30px;
+  height: 0;
+  overflow: hidden;
+  transition: .5 ease-in-out;
+  cursor: pointer;
+}
+.box:hover .overlay {
+  height: 150px;
+}
+w
+.overlay h5 {
+  color: white;
+}
+
+.overlay p {
+  color: white;
+}
+
 .footer {
   display: flex;
   align-items: center;

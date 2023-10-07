@@ -149,11 +149,12 @@ span {
 }
 
 .img-gallery {
-  padding: 20px;
+  padding: 20px 10px;
   margin: 100px auto;
   display: flex;
   justify-content: center;
-  text-align: left
+  text-align: left;
+  gap: 10%;
 }
 .box {
   display: inline-block;
@@ -181,16 +182,58 @@ span {
   z-index: 32;
 }
 .footer {
+  display: flex;
+  align-items: center;
   justify-content: space-around;
   font-family: sans-serif;
   background-color: var(--NAVY-BLUE, #2E2F42);
-  padding: 70px 150px 50px;
+  padding: 50px 25px;
 }
 
-.footer h4 {
-  color: white;
+.footer .text {
+  text-align: left;
 }
 
-.footer p {
+h4 {
   color: white;
+  font-family: sans-serif;
+}
+
+p {
+  color: white;
+  font-family: sans-serif;
+}
+
+.sicon {
+  margin-right: 30%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.sicon h5 {
+  font-family: sans-serif;
+  color: white;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.32px;
+}
+
+.sicon a i {
+  width: 30px;
+  height: 30px;
+  background: #000005;
+  border: 3px solid rgb(6, 6, 228);
+  border-radius: 50%;
+  font-size: 25px;
+  color: rgb(241, 241, 250);
+  text-decoration: none;
+  transition: .5s;
+
+}
+
+.sicon a i:hover {
+
+  background: linear-gradient(130deg, rgba(107,240,12,1) 0%, rgba(226,15,33,1) 55%, rgba(0,31,255,1) 100%);
+
 }

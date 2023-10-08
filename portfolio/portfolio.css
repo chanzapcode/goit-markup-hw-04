@@ -148,76 +148,110 @@ span {
   width: 110px;
 }
 
-.img-gallery {
-  margin: 10% auto;
+.container {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  text-align: left;
-  gap: 30%;
-}
-.box {
-  display: inline-block;
-  margin: 0 25px auto;
-  width: auto;
-  border: 1px solid var(--CORNFLOWER, #E7E9FC);
-  background: var(--WHITE, #f8f7f7);
-  transition: 0.5s;
+  margin:  10% auto;
+  gap: 10%;
+  transition: 0.5s ease;
 }
 
- img {
-  border-radius: 20px;
-  transition: .5s ease-in-out;
-  margin: 50px 25px auto;
-  display: block; 
+.container:hover {
+  transform: scale(1.1);
 }
-.box h4 {
-  font-family: sans-serif;
-  color: #2E2F42;
-  margin: 0 25px auto;
-
+.parent {
+  position: relative;
+border: 1px solid var(--CORNFLOWER, #E7E9FC);
+background: var(--WHITE, #FFF);
+display: flex;
+width: 360px;
+height: 450px;
+padding-bottom: 0px;
+flex-direction: column;
+flex-wrap: wrap;
+justify-content: center;
+gap: 5px;
+flex-shrink: 0;
+text-align: left;
+overflow: hidden;
+border-radius: 20px;
 }
 
-.box h6 {
-  font-family: sans-serif;
-  color: #01010c;
-  margin: 0 25px auto;
+.parent img {
+width: 360px;
+height: 300px;
+flex-shrink: 0;
+border-radius: 25px;
+transition: 0.5s;
 }
-
-.box:hover {
+.parent img:hover {
   transform: scale(1.1);
 }
 
+.parent h6 {
+  color: #2E2F42;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+.parent p {
+  color: #2E2F42;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.32px;
+  margin: 0%;
+}
 
-.img-gallery .overlay { 
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+.overlay {
   position: absolute;
   width: 360px;
-  background-color: rgba(79, 124, 248, 0.65);
-  overflow: hidden;
-  border-radius: 25px;
-  height: 0;
-  margin: 50px 25px auto;
-  transition: .5 ease;
-}
-.img-gallery:hover .overlay {
   height: 300px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #045de9;
+  padding: 5px;
+  text-align: center;
+  transform: translateY(100%);
+  transition: 0.5s ease;
+  opacity: 0;
 }
 
-.overlay h5{
-  text-align: center;
+.parent:hover .overlay {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.overlay button {
+  margin-top: 20px;
+  background-color: #2E2F42;
   color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
   font-family: sans-serif;
-  font-size: 30px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.overlay button:hover {
+  background-color: #385000;
+}
+
+.overlay h3 {
+font-family: sans-serif;
+font-size: 20px;
+color: white;
 }
 
 .overlay p {
-  color: white;
   font-family: sans-serif;
-  text-align: center;
-  margin: 10px 10px auto;
+  font-size: 15px;
+  color: white;
 }
 
 .footer {
